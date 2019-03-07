@@ -1,5 +1,5 @@
-def AGENT_LABEL=null
 pipeline {
+  agent any
 
 	options {
   	timestamps()
@@ -11,7 +11,7 @@ pipeline {
             	sh "./test.sh"
       		}
     	}
-  	}
+  	}git commit -m "first commit"
   	post {
     	always {
         	archiveArtifacts artifacts: 'log/*', allowEmptyArchive: true
